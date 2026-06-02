@@ -2,6 +2,7 @@ import { Box, Divider, Heading, Text } from 'native-base';
 import React from 'react';
 import { LanguageContext } from '../../context/initialContext';
 import { getTermFromDictionary } from '../../translations/TranslationService';
+import { AutoLinkText } from '../../components/AutoLinkText';
 
 // custom components and helper files
 import { decodeHTML, stripHTML } from '../../helpers/helpers';
@@ -15,6 +16,7 @@ const AdditionalInformation = (data) => {
                <Box>
                     <Divider mb={2} />
                     <Heading mb={2}>{getTermFromDictionary(language, 'additional_information')}</Heading>
+                    <AutoLinkText data={location.description}/>
                     <Text>{stripHTML(decodeHTML(location.description))}</Text>
                </Box>
           );
