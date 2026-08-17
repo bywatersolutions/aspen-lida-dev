@@ -3,7 +3,7 @@ name: App Builds
 on:
 # changes to deploy/build.json on main branch
   push:
-    branches: [main, master]
+    branches: [main, master, main-test-26.08.00]
     paths:
       - "deploy/build.json"
 # manual execution
